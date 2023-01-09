@@ -1,0 +1,11 @@
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\bin\Debug\windowsFormAppPessoaIMC.exe.config
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\bin\Debug\windowsFormAppPessoaIMC.exe
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\bin\Debug\windowsFormAppPessoaIMC.pdb
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.csproj.AssemblyReference.cache
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.csproj.SuggestedBindingRedirects.cache
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.Form1.resources
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.Properties.Resources.resources
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.csproj.GenerateResource.cache
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.csproj.CoreCompileInputs.cache
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.exe
+C:\Users\josed\Desktop\csharp-projects\windowsFormAppPessoaIMC\windowsFormAppPessoaIMC\obj\Debug\windowsFormAppPessoaIMC.pdb

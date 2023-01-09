@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "windowsFormAppPessoaIMC", "windowsFormAppPessoaIMC\windowsFormAppPessoaIMC.csproj", "{A77C7F03-6EE1-48C7-A508-CECA783F43EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A77C7F03-6EE1-48C7-A508-CECA783F43EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77C7F03-6EE1-48C7-A508-CECA783F43EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77C7F03-6EE1-48C7-A508-CECA783F43EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77C7F03-6EE1-48C7-A508-CECA783F43EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3331D02-1848-4D9A-93BB-7E4A80FA8EA5}
+	EndGlobalSection
+EndGlobal

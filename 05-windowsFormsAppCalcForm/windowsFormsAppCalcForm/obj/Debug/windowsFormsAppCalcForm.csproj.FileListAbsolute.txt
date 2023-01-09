@@ -1,0 +1,11 @@
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\bin\Debug\windowsFormsAppCalcForm.exe.config
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\bin\Debug\windowsFormsAppCalcForm.exe
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\bin\Debug\windowsFormsAppCalcForm.pdb
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.csproj.AssemblyReference.cache
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.csproj.SuggestedBindingRedirects.cache
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.Form1.resources
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.Properties.Resources.resources
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.csproj.GenerateResource.cache
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.csproj.CoreCompileInputs.cache
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.exe
+C:\repositories\POO-CSharp\windowsFormsAppCalcForm\windowsFormsAppCalcForm\obj\Debug\windowsFormsAppCalcForm.pdb

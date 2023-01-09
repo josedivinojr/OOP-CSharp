@@ -1,0 +1,15 @@
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\bin\Debug\net6.0\mediaaluno.exe
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\bin\Debug\net6.0\mediaaluno.deps.json
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\bin\Debug\net6.0\mediaaluno.runtimeconfig.json
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\bin\Debug\net6.0\mediaaluno.dll
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\bin\Debug\net6.0\mediaaluno.pdb
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.csproj.AssemblyReference.cache
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.AssemblyInfoInputs.cache
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.AssemblyInfo.cs
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.csproj.CoreCompileInputs.cache
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.dll
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\refint\mediaaluno.dll
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.pdb
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\mediaaluno.genruntimeconfig.cache
+C:\Users\josed\Desktop\csharp-projects\mediaaluno\mediaaluno\obj\Debug\net6.0\ref\mediaaluno.dll

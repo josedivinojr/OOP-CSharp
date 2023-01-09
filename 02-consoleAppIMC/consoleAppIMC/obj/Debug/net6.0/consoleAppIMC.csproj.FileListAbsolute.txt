@@ -1,0 +1,15 @@
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\bin\Debug\net6.0\consoleAppIMC.exe
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\bin\Debug\net6.0\consoleAppIMC.deps.json
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\bin\Debug\net6.0\consoleAppIMC.runtimeconfig.json
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\bin\Debug\net6.0\consoleAppIMC.dll
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\bin\Debug\net6.0\consoleAppIMC.pdb
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.csproj.AssemblyReference.cache
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.AssemblyInfoInputs.cache
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.AssemblyInfo.cs
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.csproj.CoreCompileInputs.cache
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.dll
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\refint\consoleAppIMC.dll
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.pdb
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\consoleAppIMC.genruntimeconfig.cache
+C:\Users\josed\Desktop\csharp-projects\consoleAppIMC\consoleAppIMC\obj\Debug\net6.0\ref\consoleAppIMC.dll
