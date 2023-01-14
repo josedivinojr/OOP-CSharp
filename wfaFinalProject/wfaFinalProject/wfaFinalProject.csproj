@@ -104,6 +104,7 @@
     <Compile Include="Appointments.cs" />
     <Compile Include="Asset.cs" />
     <Compile Include="BaseCostumer.cs" />
+    <Compile Include="CPFCostumer.cs" />
     <Compile Include="MDConnection.cs" />
     <Compile Include="Costumer.cs" />
     <Compile Include="Form1.cs">

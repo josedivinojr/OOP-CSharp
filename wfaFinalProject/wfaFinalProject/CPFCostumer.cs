@@ -1,32 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Data;
+
 
 namespace wfaFinalProject
 {
-    class Asset
+    class CPFCostumer : BaseCostumer
     {
-        private string serialNumber;
-        private string model;
-        private string costumerCPFCNPJ;
+        private string cpf;
 
-        public Asset (string costumerCPFCNPJ, string model, string serialNumber)
+        public CPFCostumer(string cpf, string name, string address, string email, string phone) : base(name, address, email, phone)
         {
-            this.costumerCPFCNPJ = costumerCPFCNPJ;
-            this.model = model;
-            this.serialNumber = serialNumber;
+            this.cpf = cpf;
+            this.name = name;
+            this.address = address;
+            this.email = email;
+            this.phone = phone;
         }
 
-        public string SerialNumber { get { return serialNumber; } set { serialNumber = value; } }
-        public string Model { get { return model; } set { model = value; } }
-        public string CostumerCPFCNPJ { get { return costumerCPFCNPJ; } set { costumerCPFCNPJ = value; } }
+        public string Cpf { get { return cpf; } set { cpf = value; } }
+        public string Name { get { return name; } set { name = value; } }
+        public string Address { get { return address; } set { address = value; } }
+        public string Email { get { return email; } set { email = value; } }
+        public string Phone { get { return phone; } set { phone = value; } }
 
-        public string updateInformation(string strQuery)
+        public override string getNextAppointment(string date)
+        {
+            return "asd";
+        }
+
+        public override string updateInformation(string strQuery)
         {
             DataTable dataTable = new DataTable();
             MDConnection connection = new MDConnection();
@@ -46,7 +53,7 @@ namespace wfaFinalProject
             return result;
         }
 
-        public string insertInformation(string strQuery)
+        public override string insertInformation(string strQuery)
         {
             DataTable dataTable = new DataTable();
             MDConnection connection = new MDConnection();

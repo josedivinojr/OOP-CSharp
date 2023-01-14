@@ -10,11 +10,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace wfaFinalProject
 {
-    class Costumer : BaseCostumer
+    class CNPJCostumer : BaseCostumer
     {
-        protected string cnpj;
-
-        public Costumer(string cnpj, string name, string address, string email, string phone) : base(name, address, email, phone)
+        private string cnpj;
+        public CNPJCostumer(string cnpj, string name, string address, string email, string phone) : base(name, address, email, phone)
         {
             this.cnpj = cnpj;
             this.name = name;

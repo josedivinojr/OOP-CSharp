@@ -33,8 +33,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbParts = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridViewParts = new System.Windows.Forms.DataGridView();
             this.btnSelectAllParts = new FontAwesome.Sharp.IconButton();
+            this.dataGridViewParts = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParts)).BeginInit();
             this.SuspendLayout();
@@ -97,14 +97,6 @@
             this.label14.TabIndex = 37;
             this.label14.Text = "Modelo";
             // 
-            // dataGridViewParts
-            // 
-            this.dataGridViewParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewParts.Location = new System.Drawing.Point(12, 140);
-            this.dataGridViewParts.Name = "dataGridViewParts";
-            this.dataGridViewParts.Size = new System.Drawing.Size(637, 460);
-            this.dataGridViewParts.TabIndex = 47;
-            // 
             // btnSelectAllParts
             // 
             this.btnSelectAllParts.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -118,6 +110,14 @@
             this.btnSelectAllParts.Text = "Listar todas as peças";
             this.btnSelectAllParts.UseVisualStyleBackColor = true;
             this.btnSelectAllParts.Click += new System.EventHandler(this.btnSelectAllParts_Click);
+            // 
+            // dataGridViewParts
+            // 
+            this.dataGridViewParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewParts.Location = new System.Drawing.Point(12, 140);
+            this.dataGridViewParts.Name = "dataGridViewParts";
+            this.dataGridViewParts.Size = new System.Drawing.Size(637, 460);
+            this.dataGridViewParts.TabIndex = 47;
             // 
             // FormParts
             // 

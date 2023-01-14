@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mtbCNPJ = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.mtbCPFCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.lbCPFCNPJ = new System.Windows.Forms.Label();
             this.lbAdress = new System.Windows.Forms.Label();
             this.cbAddressNewCostumer = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbRasaoSocialNewCostumer = new System.Windows.Forms.TextBox();
+            this.lbNewCPFCNPJ = new System.Windows.Forms.Label();
+            this.lbNewName = new System.Windows.Forms.Label();
+            this.tbNomeRasaoSocialNewCostumer = new System.Windows.Forms.TextBox();
             this.mtbPhoneNewCostumer = new System.Windows.Forms.MaskedTextBox();
-            this.mtbCNPJNewCostumer = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCPFCNPJNewCostumer = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbEmailNewCostumer = new System.Windows.Forms.TextBox();
@@ -46,36 +46,38 @@
             this.btnClearCostumer = new FontAwesome.Sharp.IconButton();
             this.btnSelectCostumer = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.deleteCostumer = new FontAwesome.Sharp.IconButton();
             this.btUpdateCostumer = new FontAwesome.Sharp.IconButton();
             this.btnClearNewCostumer = new FontAwesome.Sharp.IconButton();
             this.btnInsertNewCostumer = new FontAwesome.Sharp.IconButton();
-            this.deleteCostumer = new FontAwesome.Sharp.IconButton();
+            this.rbCNPJ = new System.Windows.Forms.RadioButton();
+            this.rbCPF = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCostumers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mtbCNPJ
+            // mtbCPFCNPJ
             // 
-            this.mtbCNPJ.Location = new System.Drawing.Point(59, 30);
-            this.mtbCNPJ.Mask = "00.000.000/0000-00";
-            this.mtbCNPJ.Name = "mtbCNPJ";
-            this.mtbCNPJ.Size = new System.Drawing.Size(197, 20);
-            this.mtbCNPJ.TabIndex = 32;
+            this.mtbCPFCNPJ.Location = new System.Drawing.Point(59, 30);
+            this.mtbCPFCNPJ.Mask = "00.000.000/0000-00";
+            this.mtbCPFCNPJ.Name = "mtbCPFCNPJ";
+            this.mtbCPFCNPJ.Size = new System.Drawing.Size(197, 20);
+            this.mtbCPFCNPJ.TabIndex = 32;
             // 
-            // label6
+            // lbCPFCNPJ
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "CNPJ";
+            this.lbCPFCNPJ.AutoSize = true;
+            this.lbCPFCNPJ.Location = new System.Drawing.Point(19, 33);
+            this.lbCPFCNPJ.Name = "lbCPFCNPJ";
+            this.lbCPFCNPJ.Size = new System.Drawing.Size(34, 13);
+            this.lbCPFCNPJ.TabIndex = 33;
+            this.lbCPFCNPJ.Text = "CNPJ";
             // 
             // lbAdress
             // 
             this.lbAdress.AutoSize = true;
-            this.lbAdress.Location = new System.Drawing.Point(33, 157);
+            this.lbAdress.Location = new System.Drawing.Point(26, 157);
             this.lbAdress.Name = "lbAdress";
             this.lbAdress.Size = new System.Drawing.Size(53, 13);
             this.lbAdress.TabIndex = 43;
@@ -118,30 +120,33 @@
             this.cbAddressNewCostumer.Sorted = true;
             this.cbAddressNewCostumer.TabIndex = 42;
             // 
-            // label2
+            // lbNewCPFCNPJ
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "CNPJ";
+            this.lbNewCPFCNPJ.AutoSize = true;
+            this.lbNewCPFCNPJ.Location = new System.Drawing.Point(26, 33);
+            this.lbNewCPFCNPJ.Name = "lbNewCPFCNPJ";
+            this.lbNewCPFCNPJ.Size = new System.Drawing.Size(34, 13);
+            this.lbNewCPFCNPJ.TabIndex = 34;
+            this.lbNewCPFCNPJ.Text = "CNPJ";
             // 
-            // label3
+            // lbNewName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Razão Social";
+            this.lbNewName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbNewName.AutoSize = true;
+            this.lbNewName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbNewName.Location = new System.Drawing.Point(26, 64);
+            this.lbNewName.Name = "lbNewName";
+            this.lbNewName.Size = new System.Drawing.Size(70, 13);
+            this.lbNewName.TabIndex = 36;
+            this.lbNewName.Text = "Razão Social";
+            this.lbNewName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tbRasaoSocialNewCostumer
+            // tbNomeRasaoSocialNewCostumer
             // 
-            this.tbRasaoSocialNewCostumer.Location = new System.Drawing.Point(97, 61);
-            this.tbRasaoSocialNewCostumer.Name = "tbRasaoSocialNewCostumer";
-            this.tbRasaoSocialNewCostumer.Size = new System.Drawing.Size(246, 20);
-            this.tbRasaoSocialNewCostumer.TabIndex = 37;
+            this.tbNomeRasaoSocialNewCostumer.Location = new System.Drawing.Point(97, 61);
+            this.tbNomeRasaoSocialNewCostumer.Name = "tbNomeRasaoSocialNewCostumer";
+            this.tbNomeRasaoSocialNewCostumer.Size = new System.Drawing.Size(246, 20);
+            this.tbNomeRasaoSocialNewCostumer.TabIndex = 37;
             // 
             // mtbPhoneNewCostumer
             // 
@@ -151,18 +156,18 @@
             this.mtbPhoneNewCostumer.Size = new System.Drawing.Size(197, 20);
             this.mtbPhoneNewCostumer.TabIndex = 41;
             // 
-            // mtbCNPJNewCostumer
+            // mtbCPFCNPJNewCostumer
             // 
-            this.mtbCNPJNewCostumer.Location = new System.Drawing.Point(97, 30);
-            this.mtbCNPJNewCostumer.Mask = "00.000.000/0000-00";
-            this.mtbCNPJNewCostumer.Name = "mtbCNPJNewCostumer";
-            this.mtbCNPJNewCostumer.Size = new System.Drawing.Size(197, 20);
-            this.mtbCNPJNewCostumer.TabIndex = 35;
+            this.mtbCPFCNPJNewCostumer.Location = new System.Drawing.Point(97, 30);
+            this.mtbCPFCNPJNewCostumer.Mask = "00.000.000/0000-00";
+            this.mtbCPFCNPJNewCostumer.Name = "mtbCPFCNPJNewCostumer";
+            this.mtbCPFCNPJNewCostumer.Size = new System.Drawing.Size(197, 20);
+            this.mtbCPFCNPJNewCostumer.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 126);
+            this.label5.Location = new System.Drawing.Point(26, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 40;
@@ -171,7 +176,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 95);
+            this.label4.Location = new System.Drawing.Point(26, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 38;
@@ -197,11 +202,11 @@
             this.groupBox1.Controls.Add(this.btnSelectAllCostumers);
             this.groupBox1.Controls.Add(this.btnClearCostumer);
             this.groupBox1.Controls.Add(this.btnSelectCostumer);
-            this.groupBox1.Controls.Add(this.mtbCNPJ);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Controls.Add(this.mtbCPFCNPJ);
+            this.groupBox1.Controls.Add(this.lbCPFCNPJ);
+            this.groupBox1.Location = new System.Drawing.Point(12, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 187);
+            this.groupBox1.Size = new System.Drawing.Size(272, 221);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar Cliente";
@@ -252,23 +257,37 @@
             this.groupBox2.Controls.Add(this.deleteCostumer);
             this.groupBox2.Controls.Add(this.btUpdateCostumer);
             this.groupBox2.Controls.Add(this.btnClearNewCostumer);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lbNewCPFCNPJ);
             this.groupBox2.Controls.Add(this.btnInsertNewCostumer);
             this.groupBox2.Controls.Add(this.tbEmailNewCostumer);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.lbAdress);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.cbAddressNewCostumer);
-            this.groupBox2.Controls.Add(this.mtbCNPJNewCostumer);
+            this.groupBox2.Controls.Add(this.mtbCPFCNPJNewCostumer);
             this.groupBox2.Controls.Add(this.mtbPhoneNewCostumer);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.tbRasaoSocialNewCostumer);
+            this.groupBox2.Controls.Add(this.lbNewName);
+            this.groupBox2.Controls.Add(this.tbNomeRasaoSocialNewCostumer);
             this.groupBox2.Location = new System.Drawing.Point(290, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(359, 244);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Atualizar Informações";
+            // 
+            // deleteCostumer
+            // 
+            this.deleteCostumer.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.deleteCostumer.IconColor = System.Drawing.Color.Black;
+            this.deleteCostumer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteCostumer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteCostumer.Location = new System.Drawing.Point(185, 213);
+            this.deleteCostumer.Name = "deleteCostumer";
+            this.deleteCostumer.Size = new System.Drawing.Size(80, 25);
+            this.deleteCostumer.TabIndex = 44;
+            this.deleteCostumer.Text = "Deletar Cliente";
+            this.deleteCostumer.UseVisualStyleBackColor = true;
+            this.deleteCostumer.Click += new System.EventHandler(this.deleteCostumer_Click);
             // 
             // btUpdateCostumer
             // 
@@ -311,19 +330,29 @@
             this.btnInsertNewCostumer.UseVisualStyleBackColor = true;
             this.btnInsertNewCostumer.Click += new System.EventHandler(this.btnInsertNewCostumer_Click);
             // 
-            // deleteCostumer
+            // rbCNPJ
             // 
-            this.deleteCostumer.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.deleteCostumer.IconColor = System.Drawing.Color.Black;
-            this.deleteCostumer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.deleteCostumer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deleteCostumer.Location = new System.Drawing.Point(185, 213);
-            this.deleteCostumer.Name = "deleteCostumer";
-            this.deleteCostumer.Size = new System.Drawing.Size(80, 25);
-            this.deleteCostumer.TabIndex = 44;
-            this.deleteCostumer.Text = "Deletar Cliente";
-            this.deleteCostumer.UseVisualStyleBackColor = true;
-            this.deleteCostumer.Click += new System.EventHandler(this.deleteCostumer_Click);
+            this.rbCNPJ.AutoSize = true;
+            this.rbCNPJ.Location = new System.Drawing.Point(12, 12);
+            this.rbCNPJ.Name = "rbCNPJ";
+            this.rbCNPJ.Size = new System.Drawing.Size(52, 17);
+            this.rbCNPJ.TabIndex = 48;
+            this.rbCNPJ.TabStop = true;
+            this.rbCNPJ.Text = "CNPJ";
+            this.rbCNPJ.UseVisualStyleBackColor = true;
+            this.rbCNPJ.CheckedChanged += new System.EventHandler(this.rbCNPJ_CheckedChanged);
+            // 
+            // rbCPF
+            // 
+            this.rbCPF.AutoSize = true;
+            this.rbCPF.Location = new System.Drawing.Point(70, 12);
+            this.rbCPF.Name = "rbCPF";
+            this.rbCPF.Size = new System.Drawing.Size(45, 17);
+            this.rbCPF.TabIndex = 49;
+            this.rbCPF.TabStop = true;
+            this.rbCPF.Text = "CPF";
+            this.rbCPF.UseVisualStyleBackColor = true;
+            this.rbCPF.CheckedChanged += new System.EventHandler(this.rbCPF_CheckedChanged);
             // 
             // FormCostumer
             // 
@@ -331,7 +360,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(661, 612);
+            this.Controls.Add(this.rbCPF);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.rbCNPJ);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewCostumers);
             this.Name = "FormCostumer";
@@ -342,20 +373,21 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox mtbCNPJ;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox mtbCPFCNPJ;
+        private System.Windows.Forms.Label lbCPFCNPJ;
         private System.Windows.Forms.Label lbAdress;
         private System.Windows.Forms.ComboBox cbAddressNewCostumer;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbRasaoSocialNewCostumer;
+        private System.Windows.Forms.Label lbNewCPFCNPJ;
+        private System.Windows.Forms.Label lbNewName;
+        private System.Windows.Forms.TextBox tbNomeRasaoSocialNewCostumer;
         private System.Windows.Forms.MaskedTextBox mtbPhoneNewCostumer;
-        private System.Windows.Forms.MaskedTextBox mtbCNPJNewCostumer;
+        private System.Windows.Forms.MaskedTextBox mtbCPFCNPJNewCostumer;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbEmailNewCostumer;
@@ -369,5 +401,7 @@
         private FontAwesome.Sharp.IconButton btnClearNewCostumer;
         private FontAwesome.Sharp.IconButton btnInsertNewCostumer;
         public FontAwesome.Sharp.IconButton deleteCostumer;
+        private System.Windows.Forms.RadioButton rbCNPJ;
+        private System.Windows.Forms.RadioButton rbCPF;
     }
 }

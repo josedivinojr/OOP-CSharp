@@ -37,6 +37,7 @@
             this.pictureBoxLogo = new FontAwesome.Sharp.IconPictureBox();
             this.panelBackShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnAppointments = new FontAwesome.Sharp.IconButton();
             this.leftPanel.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -45,6 +46,7 @@
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.leftPanel.Controls.Add(this.btnAppointments);
             this.leftPanel.Controls.Add(this.btnParts);
             this.leftPanel.Controls.Add(this.btnAsset);
             this.leftPanel.Controls.Add(this.btnCostumer);
@@ -185,6 +187,28 @@
             this.panelDesktop.Size = new System.Drawing.Size(677, 651);
             this.panelDesktop.TabIndex = 2;
             // 
+            // btnAppointments
+            // 
+            this.btnAppointments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAppointments.FlatAppearance.BorderSize = 0;
+            this.btnAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointments.ForeColor = System.Drawing.Color.White;
+            this.btnAppointments.IconChar = FontAwesome.Sharp.IconChar.HouseChimneyWindow;
+            this.btnAppointments.IconColor = System.Drawing.Color.White;
+            this.btnAppointments.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAppointments.IconSize = 32;
+            this.btnAppointments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAppointments.Location = new System.Drawing.Point(0, 300);
+            this.btnAppointments.Name = "btnAppointments";
+            this.btnAppointments.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAppointments.Size = new System.Drawing.Size(200, 50);
+            this.btnAppointments.TabIndex = 6;
+            this.btnAppointments.Text = "Relação de Peças";
+            this.btnAppointments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAppointments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAppointments.UseVisualStyleBackColor = true;
+            this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +238,7 @@
         private FontAwesome.Sharp.IconPictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelBackShadow;
         private System.Windows.Forms.Panel panelDesktop;
+        private FontAwesome.Sharp.IconButton btnAppointments;
     }
 }
 

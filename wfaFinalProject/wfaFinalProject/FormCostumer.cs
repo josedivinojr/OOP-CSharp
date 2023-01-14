@@ -21,7 +21,7 @@ namespace wfaFinalProject
         {
             bool validInfo = true;
 
-            if (mtbCNPJ.MaskCompleted == false)
+            if (mtbCPFCNPJ.MaskCompleted == false)
             {
                 ButtonMessage("CNPJ");
                 validInfo = false;
@@ -34,7 +34,7 @@ namespace wfaFinalProject
         {
             bool validInfo = true;
 
-            if (mtbCNPJNewCostumer.MaskCompleted == false)
+            if (mtbCPFCNPJNewCostumer.MaskCompleted == false)
             {
                 ButtonMessage("CNPJ");
                 validInfo = false;
@@ -61,12 +61,13 @@ namespace wfaFinalProject
 
         private void btnSelectCostumer_Click(object sender, EventArgs e)
         {
-            string cnpj = mtbCNPJ.Text.Replace(',', '.');
+
+            string cpfcnpj = mtbCPFCNPJ.Text.Replace(',', '.');
 
             if (ValidateCostumerInfo())
             {
                 MDConnection connection = new MDConnection();
-                string strQuery = "SELECT * FROM costumer WHERE costumer_cnpj = '" + cnpj + "'";
+                string strQuery = "SELECT * FROM costumer WHERE costumer_cnpj = '" + cpfcnpj + "'";
 
                 DataTable dataTable = connection.getCostumerInformation(strQuery);
 
@@ -81,7 +82,7 @@ namespace wfaFinalProject
 
         private void btnClearCostumer_Click(object sender, EventArgs e)
         {
-            mtbCNPJ.Text = String.Empty;
+            mtbCPFCNPJ.Text = String.Empty;
         }
 
         private void btnSelectAllCostumers_Click(object sender, EventArgs e)
@@ -97,29 +98,42 @@ namespace wfaFinalProject
 
         private void btnInsertNewCostumer_Click(object sender, EventArgs e)
         {
-            string cnpj = mtbCNPJNewCostumer.Text.Replace(',', '.');
-            Costumer objCostumer = new Costumer(cnpj, tbRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+            string cpfcnpj = String.Empty;
+            string strQuery = String.Empty;
 
-            if (ValidateNewCostumerInfo())
+            if (rbCNPJ.Checked && ValidateNewCostumerInfo())
             {
-                string strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cnpj)" +
+                cpfcnpj = mtbCPFCNPJNewCostumer.Text.Replace(',', '.');
+                CNPJCostumer objCostumer = new CNPJCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+                strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cnpj)" +
                                                 "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                                                 objCostumer.Name, objCostumer.Address, objCostumer.Email, objCostumer.Phone, objCostumer.Cnpj);
 
-                DataTable dataTable = new DataTable();
                 string response = objCostumer.updateInformation(strQuery);
-
-                MessageBox.Show("Novo cliente cadastrado com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            else if (rbCPF.Checked && ValidateNewCostumerInfo())
+            {
+                cpfcnpj = mtbCPFCNPJNewCostumer.Text.Replace(',', '.');
+                CPFCostumer objCostumer = new CPFCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+                strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cnpj)" +
+                                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                                                objCostumer.Name, objCostumer.Address, objCostumer.Email, objCostumer.Phone, objCostumer.Cpf);
+
+                string response = objCostumer.updateInformation(strQuery);
+            }
+
+            MessageBox.Show("Novo cliente cadastrado com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btUpdateCostumer_Click(object sender, EventArgs e)
         {
-            string cnpj = mtbCNPJNewCostumer.Text.Replace(',', '.');
-            Costumer objCostumer = new Costumer(cnpj, tbRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+            string cpfcnpj = mtbCPFCNPJNewCostumer.Text.Replace(',', '.');
 
-            if (ValidateNewCostumerInfo())
+            if (rbCNPJ.Checked && ValidateNewCostumerInfo())
             {
+                CNPJCostumer objCostumer = new CNPJCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+
                 string strQuery = "UPDATE costumer " +
                     "SET costumer_name = '" + objCostumer.Name + "', " +
                     "costumer_address = '" + objCostumer.Address + "', " +
@@ -127,17 +141,29 @@ namespace wfaFinalProject
                     "costumer_phone = '" + objCostumer.Phone + "' " +
                     "WHERE costumer_cnpj = '" + objCostumer.Cnpj + "' ";
 
-                DataTable dataTable = new DataTable();
                 string response = objCostumer.updateInformation(strQuery);
-
-                MessageBox.Show("Dados atualizados com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            else if (rbCPF.Checked && ValidateNewCostumerInfo())
+            {
+                CPFCostumer objCostumer = new CPFCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+
+                string strQuery = "UPDATE costumer " +
+                    "SET costumer_name = '" + objCostumer.Name + "', " +
+                    "costumer_address = '" + objCostumer.Address + "', " +
+                    "costumer_email = '" + objCostumer.Email + "', " +
+                    "costumer_phone = '" + objCostumer.Phone + "' " +
+                    "WHERE costumer_cnpj = '" + objCostumer.Cpf + "' ";
+
+                string response = objCostumer.updateInformation(strQuery);
+            }
+            MessageBox.Show("Dados atualizados com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnClearNewCostumer_Click(object sender, EventArgs e)
         {
-            mtbCNPJNewCostumer.Text = String.Empty;
-            tbRasaoSocialNewCostumer.Text = String.Empty;
+            mtbCPFCNPJNewCostumer.Text = String.Empty;
+            tbNomeRasaoSocialNewCostumer.Text = String.Empty;
             tbEmailNewCostumer.Text = String.Empty;
             mtbPhoneNewCostumer.Text = String.Empty;
             cbAddressNewCostumer.Text = String.Empty;
@@ -145,18 +171,56 @@ namespace wfaFinalProject
 
         private void deleteCostumer_Click(object sender, EventArgs e)
         {
-            string cnpj = mtbCNPJNewCostumer.Text.Replace(',', '.');
-            Costumer objCostumer = new Costumer(cnpj, tbRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+            string cpfcnpj = mtbCPFCNPJNewCostumer.Text.Replace(',', '.');
 
-            if (ValidateNewCostumerInfo())
+            if (rbCNPJ.Checked)
             {
-                string strQuery = String.Format("DELETE FROM costumer where costumer_cnpj = '{0}'", objCostumer.Cnpj.Replace(',', '.'));
+                CNPJCostumer objCostumer = new CNPJCostumer(cpfcnpj
+                    , tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
 
-                DataTable dataTable = new DataTable();
-                string response = objCostumer.updateInformation(strQuery);
+                if (ValidateNewCostumerInfo())
+                {
+                    string strQuery = String.Format("DELETE FROM costumer where costumer_cnpj = '{0}'", objCostumer.Cnpj.Replace(',', '.'));
 
-                MessageBox.Show("Cliente deletado com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataTable dataTable = new DataTable();
+                    string response = objCostumer.updateInformation(strQuery);
+
+                    MessageBox.Show("Cliente deletado com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+
+            else if (rbCPF.Checked)
+            {
+                CPFCostumer objCostumer = new CPFCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
+
+                if (ValidateNewCostumerInfo())
+                {
+                    string strQuery = String.Format("DELETE FROM costumer where costumer_cnpj = '{0}'", objCostumer.Cpf.Replace(',', '.'));
+
+                    DataTable dataTable = new DataTable();
+                    string response = objCostumer.updateInformation(strQuery);
+
+                    MessageBox.Show("Cliente deletado com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            
+        }
+
+        private void rbCNPJ_CheckedChanged(object sender, EventArgs e)
+        {
+            lbCPFCNPJ.Text = "CNPJ";
+            lbNewCPFCNPJ.Text = "CNPJ";
+            lbNewName.Text = "Razão Social";
+            mtbCPFCNPJ.Mask = "00.000.000/0000-00";
+
+        }
+
+        private void rbCPF_CheckedChanged(object sender, EventArgs e)
+        {
+            lbCPFCNPJ.Text = "CPF";
+            lbNewCPFCNPJ.Text = "CPF";
+            lbNewName.Text = "Nome";
+            mtbCPFCNPJ.Mask = "000.000.000-00";
         }
     }
 }

@@ -105,6 +105,12 @@ namespace wfaFinalProject
             OpenChildForm(new FormParts());
         }
 
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            OpenChildForm(new FormAppointment());
+        }
+
         private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
             
@@ -128,6 +134,6 @@ namespace wfaFinalProject
             childForm.Show();
 
         }
-         
+
     }
 }

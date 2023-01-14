@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace wfaFinalProject
 {
-    internal class Appointments : Costumer
+    class Appointments 
     {
         private string date;
         public string Date { get { return date; } set { date = value; } }
 
-        public Appointments(string date, string cnpj, string name, string address, string email, string phone) : base(cnpj, name, address, email, phone)
+        public Appointments(string date)
         {
             this.date = date;
         }

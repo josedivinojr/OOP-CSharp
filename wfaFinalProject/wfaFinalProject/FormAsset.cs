@@ -26,7 +26,7 @@ namespace wfaFinalProject
 
             if (mtbAssetSerial.MaskCompleted == false)
             {
-                ButtonMessage("Nº Serial");
+                ButtonMessage("Nº de Sperue");
                 validInfo = false;
             }
 
@@ -39,11 +39,11 @@ namespace wfaFinalProject
 
             if (mtbNewAssetSerial.MaskCompleted == false)
             {
-                ButtonMessage("Nº Serial");
+                ButtonMessage("Nº de Série");
                 validInfo = false;
             }
 
-            if (mtbNewAssetCNPJ.MaskCompleted == false)
+            if (mtbNewAssetCPFCNPJ.MaskCompleted == false)
             {
                 ButtonMessage("CNPJ");
                 validInfo = false;
@@ -89,15 +89,15 @@ namespace wfaFinalProject
 
         private void btUpdateAsset_Click(object sender, EventArgs e)
         {
-            string cnpj = mtbNewAssetCNPJ.Text.Replace(',', '.');
-            Asset objAsset = new Asset(cnpj, tbNewAssetModel.Text, mtbNewAssetSerial.Text);
-
+            string cpfcnpj = mtbNewAssetCPFCNPJ.Text.Replace(',', '.');
             if (ValidateNewAssetInfo())
             {
+                Asset objAsset = new Asset(cpfcnpj, tbNewAssetModel.Text, mtbNewAssetSerial.Text);
+
                 string strQuery = "UPDATE asset " +
                     "SET asset_serial = '" + objAsset.SerialNumber + "', " +
                     "asset_model = '" + objAsset.Model + "', " +
-                    "costumer_cnpj = '" + objAsset.CostumerCNPJ + "'";
+                    "costumer_cnpj = '" + objAsset.CostumerCPFCNPJ + "'";
 
                 DataTable dataTable = new DataTable();
                 string response = objAsset.updateInformation(strQuery);
@@ -110,20 +110,29 @@ namespace wfaFinalProject
         {
             if (ValidateNewAssetInfo())
             {
-                string cnpj = mtbNewAssetCNPJ.Text.Replace(',', '.');
+                string cnpj = mtbNewAssetCPFCNPJ.Text.Replace(',', '.');
                 Asset objAsset = new Asset(cnpj, tbNewAssetModel.Text, mtbNewAssetSerial.Text);
 
-                if (ValidateNewAssetInfo())
-                {
-                    string strQuery = String.Format("INSERT INTO asset (asset_serial, asset_model, costumer_cnpj" +
-                                                    "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
-                                                    objAsset.SerialNumber, objAsset.Model, objAsset.CostumerCNPJ);
-                    DataTable dataTable = new DataTable();
-                    string response = objAsset.updateInformation(strQuery);
+                string strQuery = String.Format("INSERT INTO asset (asset_serial, asset_model, costumer_cnpj" +
+                                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                                                objAsset.SerialNumber, objAsset.Model, objAsset.CostumerCPFCNPJ);
+                DataTable dataTable = new DataTable();
+                string response = objAsset.updateInformation(strQuery);
 
-                    MessageBox.Show("Novo cliente cadastrado com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                MessageBox.Show("Novo cliente cadastrado com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void rbCNPJ_CheckedChanged(object sender, EventArgs e)
+        {
+            mtbNewAssetCPFCNPJ.Mask = "00.000.000/0000-00";
+            lbCPFCNPJ.Text = "CNPJ do Cliente";
+        }
+
+        private void rbCPF_CheckedChanged(object sender, EventArgs e)
+        {
+            mtbNewAssetCPFCNPJ.Mask = "000.000.000-00";
+            lbCPFCNPJ.Text = "CPF do Cliente";
         }
     }
 }

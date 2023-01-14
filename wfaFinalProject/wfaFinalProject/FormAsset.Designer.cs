@@ -32,12 +32,12 @@
             this.btUpdateAsset = new FontAwesome.Sharp.IconButton();
             this.btnClearNewAsset = new FontAwesome.Sharp.IconButton();
             this.btnInsertNewAsset = new FontAwesome.Sharp.IconButton();
-            this.mtbNewAssetCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNewAssetCPFCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tbNewAssetModel = new System.Windows.Forms.TextBox();
             this.mtbNewAssetSerial = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbCPFCNPJ = new System.Windows.Forms.Label();
             this.btnSelectAsset = new FontAwesome.Sharp.IconButton();
             this.btnSelectAllAssets = new FontAwesome.Sharp.IconButton();
             this.btnClearAsset = new FontAwesome.Sharp.IconButton();
@@ -45,6 +45,8 @@
             this.mtbAssetSerial = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewAssets = new System.Windows.Forms.DataGridView();
+            this.rbCPF = new System.Windows.Forms.RadioButton();
+            this.rbCNPJ = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssets)).BeginInit();
@@ -55,12 +57,12 @@
             this.groupBox2.Controls.Add(this.btUpdateAsset);
             this.groupBox2.Controls.Add(this.btnClearNewAsset);
             this.groupBox2.Controls.Add(this.btnInsertNewAsset);
-            this.groupBox2.Controls.Add(this.mtbNewAssetCNPJ);
+            this.groupBox2.Controls.Add(this.mtbNewAssetCPFCNPJ);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tbNewAssetModel);
             this.groupBox2.Controls.Add(this.mtbNewAssetSerial);
-            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lbCPFCNPJ);
             this.groupBox2.Location = new System.Drawing.Point(290, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(359, 244);
@@ -108,13 +110,13 @@
             this.btnInsertNewAsset.UseVisualStyleBackColor = true;
             this.btnInsertNewAsset.Click += new System.EventHandler(this.btnInsertNewAsset_Click);
             // 
-            // mtbNewAssetCNPJ
+            // mtbNewAssetCPFCNPJ
             // 
-            this.mtbNewAssetCNPJ.Location = new System.Drawing.Point(129, 30);
-            this.mtbNewAssetCNPJ.Mask = "00.000.000/0000-00";
-            this.mtbNewAssetCNPJ.Name = "mtbNewAssetCNPJ";
-            this.mtbNewAssetCNPJ.Size = new System.Drawing.Size(197, 20);
-            this.mtbNewAssetCNPJ.TabIndex = 40;
+            this.mtbNewAssetCPFCNPJ.Location = new System.Drawing.Point(129, 30);
+            this.mtbNewAssetCPFCNPJ.Mask = "00.000.000/0000-00";
+            this.mtbNewAssetCPFCNPJ.Name = "mtbNewAssetCPFCNPJ";
+            this.mtbNewAssetCPFCNPJ.Size = new System.Drawing.Size(197, 20);
+            this.mtbNewAssetCPFCNPJ.TabIndex = 40;
             // 
             // label8
             // 
@@ -149,14 +151,14 @@
             this.mtbNewAssetSerial.Size = new System.Drawing.Size(197, 20);
             this.mtbNewAssetSerial.TabIndex = 36;
             // 
-            // label11
+            // lbCPFCNPJ
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(32, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 13);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "CNPJ do Cliente";
+            this.lbCPFCNPJ.AutoSize = true;
+            this.lbCPFCNPJ.Location = new System.Drawing.Point(32, 33);
+            this.lbCPFCNPJ.Name = "lbCPFCNPJ";
+            this.lbCPFCNPJ.Size = new System.Drawing.Size(84, 13);
+            this.lbCPFCNPJ.TabIndex = 39;
+            this.lbCPFCNPJ.Text = "CNPJ do Cliente";
             // 
             // btnSelectAsset
             // 
@@ -205,9 +207,9 @@
             this.groupBox1.Controls.Add(this.btnSelectAllAssets);
             this.groupBox1.Controls.Add(this.btnClearAsset);
             this.groupBox1.Controls.Add(this.btnSelectAsset);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 187);
+            this.groupBox1.Size = new System.Drawing.Size(272, 221);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar Ativo";
@@ -237,12 +239,38 @@
             this.dataGridViewAssets.Size = new System.Drawing.Size(637, 325);
             this.dataGridViewAssets.TabIndex = 47;
             // 
+            // rbCPF
+            // 
+            this.rbCPF.AutoSize = true;
+            this.rbCPF.Location = new System.Drawing.Point(70, 12);
+            this.rbCPF.Name = "rbCPF";
+            this.rbCPF.Size = new System.Drawing.Size(45, 17);
+            this.rbCPF.TabIndex = 51;
+            this.rbCPF.TabStop = true;
+            this.rbCPF.Text = "CPF";
+            this.rbCPF.UseVisualStyleBackColor = true;
+            this.rbCPF.CheckedChanged += new System.EventHandler(this.rbCPF_CheckedChanged);
+            // 
+            // rbCNPJ
+            // 
+            this.rbCNPJ.AutoSize = true;
+            this.rbCNPJ.Location = new System.Drawing.Point(12, 12);
+            this.rbCNPJ.Name = "rbCNPJ";
+            this.rbCNPJ.Size = new System.Drawing.Size(52, 17);
+            this.rbCNPJ.TabIndex = 50;
+            this.rbCNPJ.TabStop = true;
+            this.rbCNPJ.Text = "CNPJ";
+            this.rbCNPJ.UseVisualStyleBackColor = true;
+            this.rbCNPJ.CheckedChanged += new System.EventHandler(this.rbCNPJ_CheckedChanged);
+            // 
             // FormAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 612);
+            this.Controls.Add(this.rbCPF);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.rbCNPJ);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewAssets);
             this.Name = "FormAsset";
@@ -253,18 +281,19 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssets)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.MaskedTextBox mtbNewAssetCNPJ;
+        private System.Windows.Forms.MaskedTextBox mtbNewAssetCPFCNPJ;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbNewAssetModel;
         private System.Windows.Forms.MaskedTextBox mtbNewAssetSerial;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbCPFCNPJ;
         private FontAwesome.Sharp.IconButton btnSelectAsset;
         private FontAwesome.Sharp.IconButton btnSelectAllAssets;
         private FontAwesome.Sharp.IconButton btnClearAsset;
@@ -275,5 +304,7 @@
         private FontAwesome.Sharp.IconButton btnInsertNewAsset;
         private System.Windows.Forms.MaskedTextBox mtbAssetSerial;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton rbCPF;
+        private System.Windows.Forms.RadioButton rbCNPJ;
     }
 }
