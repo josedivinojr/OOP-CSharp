@@ -38,15 +38,16 @@ namespace wfaFinalProject
                 DisableButton();
                 // highligth button
                 selectedButton = (IconButton)senderButton;
-                selectedButton.BackColor = Color.FromArgb(37, 37, 81);
+                selectedButton.BackColor = Color.FromArgb(88, 146, 187);
                 selectedButton.ForeColor = color;
                 selectedButton.TextAlign = ContentAlignment.MiddleCenter;
+                selectedButton.ForeColor = Color.FromArgb(255, 255, 76);
                 selectedButton.ImageAlign = ContentAlignment.MiddleCenter;
-                selectedButton.IconColor = color;
+                selectedButton.IconColor = Color.FromArgb(255, 255, 76);
                 selectedButton.TextImageRelation = TextImageRelation.ImageBeforeText;
 
                 // lighlight left border
-                leftBorderButton.BackColor = color;
+                leftBorderButton.BackColor = Color.FromArgb(147, 173, 195);
                 leftBorderButton.Location = new Point(0, selectedButton.Location.Y);
                 leftBorderButton.Visible = true;
                 leftBorderButton.BringToFront();
@@ -57,7 +58,7 @@ namespace wfaFinalProject
         {
             if(selectedButton != null)
             {
-                selectedButton.BackColor = Color.FromArgb(31, 30, 68);
+                selectedButton.BackColor = Color.FromArgb(29, 83, 116);
                 selectedButton.ForeColor = Color.Gainsboro;
                 selectedButton.TextAlign = ContentAlignment.MiddleLeft;
                 selectedButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -78,36 +79,37 @@ namespace wfaFinalProject
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            ActivateButton(sender, Color.FromArgb(29, 83, 116));
+            pictureBox1.BringToFront();
         }
 
         private void btnCostumer_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            ActivateButton(sender, Color.FromArgb(29, 83, 116));
             OpenChildForm(new FormCostumer());
         }
 
         private void btnAsset_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            ActivateButton(sender, Color.FromArgb(29, 83, 116));
             OpenChildForm(new FormAsset());
         }
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            ActivateButton(sender, Color.FromArgb(29, 83, 116));
             OpenChildForm(new FormAppointment());
         }
 
         private void btnParts_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            ActivateButton(sender, Color.FromArgb(29, 83, 116));
             OpenChildForm(new FormParts());
         }
 
         private void btnAppointments_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(172, 126, 241));
+            ActivateButton(sender, Color.FromArgb(29, 83, 116));
             OpenChildForm(new FormAppointment());
         }
 

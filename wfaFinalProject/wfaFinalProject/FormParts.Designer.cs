@@ -30,12 +30,12 @@
         {
             this.btnSelectParts = new FontAwesome.Sharp.IconButton();
             this.btnClearParts = new FontAwesome.Sharp.IconButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxAppointment = new System.Windows.Forms.GroupBox();
             this.cbParts = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSelectAllParts = new FontAwesome.Sharp.IconButton();
             this.dataGridViewParts = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxAppointment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,19 +65,19 @@
             this.btnClearParts.Text = "Limpar";
             this.btnClearParts.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // groupBoxAppointment
             // 
-            this.groupBox1.Controls.Add(this.cbParts);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.btnSelectAllParts);
-            this.groupBox1.Controls.Add(this.btnClearParts);
-            this.groupBox1.Controls.Add(this.btnSelectParts);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 122);
-            this.groupBox1.TabIndex = 48;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisar Relação de Peças";
+            this.groupBoxAppointment.Controls.Add(this.cbParts);
+            this.groupBoxAppointment.Controls.Add(this.label14);
+            this.groupBoxAppointment.Controls.Add(this.btnSelectAllParts);
+            this.groupBoxAppointment.Controls.Add(this.btnClearParts);
+            this.groupBoxAppointment.Controls.Add(this.btnSelectParts);
+            this.groupBoxAppointment.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxAppointment.Name = "groupBoxAppointment";
+            this.groupBoxAppointment.Size = new System.Drawing.Size(272, 122);
+            this.groupBoxAppointment.TabIndex = 48;
+            this.groupBoxAppointment.TabStop = false;
+            this.groupBoxAppointment.Text = "Pesquisar Relação de Visitas";
             // 
             // cbParts
             // 
@@ -107,7 +107,7 @@
             this.btnSelectAllParts.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSelectAllParts.Size = new System.Drawing.Size(161, 25);
             this.btnSelectAllParts.TabIndex = 36;
-            this.btnSelectAllParts.Text = "Listar todas as peças";
+            this.btnSelectAllParts.Text = "Listar todas as visitas";
             this.btnSelectAllParts.UseVisualStyleBackColor = true;
             this.btnSelectAllParts.Click += new System.EventHandler(this.btnSelectAllParts_Click);
             // 
@@ -124,12 +124,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 612);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxAppointment);
             this.Controls.Add(this.dataGridViewParts);
             this.Name = "FormParts";
             this.Text = "FormParts";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxAppointment.ResumeLayout(false);
+            this.groupBoxAppointment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParts)).EndInit();
             this.ResumeLayout(false);
 
@@ -138,7 +138,7 @@
         #endregion
         private FontAwesome.Sharp.IconButton btnSelectParts;
         private FontAwesome.Sharp.IconButton btnClearParts;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxAppointment;
         private System.Windows.Forms.DataGridView dataGridViewParts;
         private System.Windows.Forms.ComboBox cbParts;
         private System.Windows.Forms.Label label14;

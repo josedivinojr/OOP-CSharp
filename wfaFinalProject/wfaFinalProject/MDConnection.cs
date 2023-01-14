@@ -61,5 +61,24 @@ namespace wfaFinalProject
             objConnection.Close();
             return dataTable;
         }
+
+        public DataTable getAppointmentsInformation(string strQuery)
+        {
+            DataTable dataTable = new DataTable();
+            var strConnection = String.Format("Server = {0}; Port = {1}; Username = {2}; " +
+                                            "Password = {3}; Database = {4}",
+                                            serverName, port, userName, password, dataBaseName);
+
+            NpgsqlConnection objConnection = new NpgsqlConnection(strConnection);
+            objConnection.Open();
+
+            using (NpgsqlDataAdapter npgsqlDataAdapter = new NpgsqlDataAdapter(strQuery, objConnection))
+            {
+                npgsqlDataAdapter.Fill(dataTable);
+            }
+
+            objConnection.Close();
+            return dataTable;
+        }
     }
 }
