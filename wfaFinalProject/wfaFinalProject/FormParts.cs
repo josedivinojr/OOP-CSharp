@@ -42,9 +42,7 @@ namespace wfaFinalProject
 
             dataGridViewParts.DataSource = dataTable;
             dataGridViewParts.AutoResizeColumnHeadersHeight();
-            dataGridViewParts.AutoResizeRowHeadersWidth(2, DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
-
-
+            dataGridViewParts.AutoResizeRowHeadersWidth(2, DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);;
 
             MessageBox.Show("Consulta realizada com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

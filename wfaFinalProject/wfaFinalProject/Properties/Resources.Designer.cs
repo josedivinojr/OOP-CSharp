@@ -63,56 +63,6 @@ namespace wfaFinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crystal_kwok_mhUsz2ezlXQ_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("crystal-kwok-mhUsz2ezlXQ-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap crystal_kwok_mhUsz2ezlXQ_unsplash1 {
-            get {
-                object obj = ResourceManager.GetObject("crystal-kwok-mhUsz2ezlXQ-unsplash1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap istockphoto_1148023535_170667a {
-            get {
-                object obj = ResourceManager.GetObject("istockphoto-1148023535-170667a", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap oleg_laptev_hwu_uFaXzOU_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("oleg-laptev-hwu-uFaXzOU-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap product_landing_banner {
-            get {
-                object obj = ResourceManager.GetObject("product-landing-banner", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap simone_hutsch_XTyNwgCYWTk_unsplash {
             get {
                 object obj = ResourceManager.GetObject("simone-hutsch-XTyNwgCYWTk-unsplash", resourceCulture);
