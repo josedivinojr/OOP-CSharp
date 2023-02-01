@@ -233,7 +233,7 @@
             this.Controls.Add(this.dataGridViewAppointment);
             this.Controls.Add(this.groupBoxSearchAppointment);
             this.Name = "FormAppointment";
-            this.Text = "FormAppointment";
+            this.Text = "Visitas Técnicas";
             this.groupBoxSearchAppointment.ResumeLayout(false);
             this.groupBoxSearchAppointment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointment)).EndInit();

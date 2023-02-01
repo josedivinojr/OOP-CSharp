@@ -71,15 +71,31 @@ namespace wfaFinalProject
 
             if (ValidateAssetInfo())
             {
-
-                DataTable dataTable = new DataTable();
-
                 string strQuery = "SELECT * FROM asset WHERE asset_serial = '" + serialNumber + "'";
 
+                MDConnection connection = new MDConnection();
+            
+                DataTable dataTable = connection.getCostumerInformation(strQuery);
+
                 dataGridViewAssets.DataSource = dataTable;
+                dataGridViewAssets.AutoResizeColumnHeadersHeight();
 
                 MessageBox.Show("Consulta realizada com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+
+        private void btnSelectAllAssets_Click(object sender, EventArgs e)
+        {
+            string strQuery = "SELECT * FROM asset";
+
+            MDConnection connection = new MDConnection();
+
+            DataTable dataTable = connection.getCostumerInformation(strQuery);
+            dataGridViewAssets.DataSource = dataTable;
+            dataGridViewAssets.AutoResizeColumnHeadersHeight();
+
+            MessageBox.Show("Consulta realizada com sucesso:", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnClearAsset_Click(object sender, EventArgs e)
@@ -95,9 +111,9 @@ namespace wfaFinalProject
                 Asset objAsset = new Asset(cpfcnpj, tbNewAssetModel.Text, mtbNewAssetSerial.Text);
 
                 string strQuery = "UPDATE asset " +
-                    "SET asset_serial = '" + objAsset.SerialNumber + "', " +
-                    "asset_model = '" + objAsset.Model + "', " +
-                    "costumer_cnpj = '" + objAsset.CostumerCPFCNPJ + "'";
+                                  "SET asset_serial = '" + objAsset.SerialNumber + "', " +
+                                  "asset_model = '" + objAsset.Model + "', " +
+                                  "costumercpf_cnpj = '" + objAsset.CostumerCPFCNPJ + "'";
 
                 DataTable dataTable = new DataTable();
                 string response = objAsset.updateInformation(strQuery);
@@ -113,7 +129,7 @@ namespace wfaFinalProject
                 string cnpj = mtbNewAssetCPFCNPJ.Text.Replace(',', '.');
                 Asset objAsset = new Asset(cnpj, tbNewAssetModel.Text, mtbNewAssetSerial.Text);
 
-                string strQuery = String.Format("INSERT INTO asset (asset_serial, asset_model, costumer_cnpj" +
+                string strQuery = String.Format("INSERT INTO asset (asset_serial, asset_model, costumer_cpfcnpj" +
                                                 "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                                                 objAsset.SerialNumber, objAsset.Model, objAsset.CostumerCPFCNPJ);
                 DataTable dataTable = new DataTable();
@@ -134,5 +150,6 @@ namespace wfaFinalProject
             mtbNewAssetCPFCNPJ.Mask = "000.000.000-00";
             lbCPFCNPJ.Text = "CPF do Cliente";
         }
+
     }
 }

@@ -4,7 +4,6 @@ C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\bin\Debug\wfaFinalPro
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\bin\Debug\FontAwesome.Sharp.dll
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.csproj.AssemblyReference.cache
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.csproj.SuggestedBindingRedirects.cache
-C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.Form1.resources
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.Properties.Resources.resources
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.csproj.GenerateResource.cache
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.csproj.CoreCompileInputs.cache
@@ -45,3 +44,4 @@ C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\bin\Debug\System.Text
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\bin\Debug\System.Threading.Channels.xml
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\bin\Debug\System.ValueTuple.xml
+C:\repositories\OOP-CSharp\wfaFinalProject\wfaFinalProject\obj\Debug\wfaFinalProject.FormHomePage.resources

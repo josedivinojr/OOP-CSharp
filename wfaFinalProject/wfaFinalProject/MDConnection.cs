@@ -14,7 +14,7 @@ namespace wfaFinalProject
         private string port = "5432";
         private string userName = "postgres";
         private string password = "cubo123";
-        private string dataBaseName = "POOfinalProject";
+        private string dataBaseName = "finalProjectAssetsManager";
 
         public string connect()
         {

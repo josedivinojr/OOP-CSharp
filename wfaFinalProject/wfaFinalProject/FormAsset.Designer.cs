@@ -184,8 +184,9 @@
             this.btnSelectAllAssets.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSelectAllAssets.Size = new System.Drawing.Size(161, 25);
             this.btnSelectAllAssets.TabIndex = 36;
-            this.btnSelectAllAssets.Text = "Listas todos os Clientes";
+            this.btnSelectAllAssets.Text = "Listar Ativos";
             this.btnSelectAllAssets.UseVisualStyleBackColor = true;
+            this.btnSelectAllAssets.Click += new System.EventHandler(this.btnSelectAllAssets_Click);
             // 
             // btnClearAsset
             // 
@@ -217,7 +218,7 @@
             // mtbAssetSerial
             // 
             this.mtbAssetSerial.Location = new System.Drawing.Point(84, 30);
-            this.mtbAssetSerial.Mask = "00000000-00";
+            this.mtbAssetSerial.Mask = "0000000-00";
             this.mtbAssetSerial.Name = "mtbAssetSerial";
             this.mtbAssetSerial.Size = new System.Drawing.Size(161, 20);
             this.mtbAssetSerial.TabIndex = 38;
@@ -274,7 +275,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewAssets);
             this.Name = "FormAsset";
-            this.Text = "FormAsset";
+            this.Text = "Ativos";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -67,7 +67,7 @@ namespace wfaFinalProject
             if (ValidateCostumerInfo())
             {
                 MDConnection connection = new MDConnection();
-                string strQuery = "SELECT * FROM costumer WHERE costumer_cnpj = '" + cpfcnpj + "'";
+                string strQuery = "SELECT * FROM costumer WHERE costumer_cpfcnpj = '" + cpfcnpj + "'";
 
                 DataTable dataTable = connection.getCostumerInformation(strQuery);
 
@@ -105,7 +105,7 @@ namespace wfaFinalProject
             {
                 cpfcnpj = mtbCPFCNPJNewCostumer.Text.Replace(',', '.');
                 CNPJCostumer objCostumer = new CNPJCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
-                strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cnpj)" +
+                strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cpfcnpj)" +
                                                 "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                                                 objCostumer.Name, objCostumer.Address, objCostumer.Email, objCostumer.Phone, objCostumer.Cnpj);
 
@@ -116,7 +116,7 @@ namespace wfaFinalProject
             {
                 cpfcnpj = mtbCPFCNPJNewCostumer.Text.Replace(',', '.');
                 CPFCostumer objCostumer = new CPFCostumer(cpfcnpj, tbNomeRasaoSocialNewCostumer.Text, cbAddressNewCostumer.Text, tbEmailNewCostumer.Text, mtbPhoneNewCostumer.Text);
-                strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cnpj)" +
+                strQuery = String.Format("INSERT INTO costumer (costumer_name, costumer_address, costumer_email, costumer_phone, costumer_cpfcnpj)" +
                                                 "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                                                 objCostumer.Name, objCostumer.Address, objCostumer.Email, objCostumer.Phone, objCostumer.Cpf);
 
@@ -139,7 +139,7 @@ namespace wfaFinalProject
                     "costumer_address = '" + objCostumer.Address + "', " +
                     "costumer_email = '" + objCostumer.Email + "', " +
                     "costumer_phone = '" + objCostumer.Phone + "' " +
-                    "WHERE costumer_cnpj = '" + objCostumer.Cnpj + "' ";
+                    "WHERE costumer_cpfcnpj = '" + objCostumer.Cnpj + "' ";
 
                 string response = objCostumer.updateInformation(strQuery);
             }
@@ -153,7 +153,7 @@ namespace wfaFinalProject
                     "costumer_address = '" + objCostumer.Address + "', " +
                     "costumer_email = '" + objCostumer.Email + "', " +
                     "costumer_phone = '" + objCostumer.Phone + "' " +
-                    "WHERE costumer_cnpj = '" + objCostumer.Cpf + "' ";
+                    "WHERE costumer_cpfcnpj = '" + objCostumer.Cpf + "' ";
 
                 string response = objCostumer.updateInformation(strQuery);
             }
@@ -180,7 +180,7 @@ namespace wfaFinalProject
 
                 if (ValidateNewCostumerInfo())
                 {
-                    string strQuery = String.Format("DELETE FROM costumer where costumer_cnpj = '{0}'", objCostumer.Cnpj.Replace(',', '.'));
+                    string strQuery = String.Format("DELETE FROM costumer where costumer_cpfcnpj = '{0}'", objCostumer.Cnpj.Replace(',', '.'));
 
                     DataTable dataTable = new DataTable();
                     string response = objCostumer.updateInformation(strQuery);
@@ -195,7 +195,7 @@ namespace wfaFinalProject
 
                 if (ValidateNewCostumerInfo())
                 {
-                    string strQuery = String.Format("DELETE FROM costumer where costumer_cnpj = '{0}'", objCostumer.Cpf.Replace(',', '.'));
+                    string strQuery = String.Format("DELETE FROM costumer where costumer_cpfcnpj = '{0}'", objCostumer.Cpf.Replace(',', '.'));
 
                     DataTable dataTable = new DataTable();
                     string response = objCostumer.updateInformation(strQuery);
@@ -212,7 +212,7 @@ namespace wfaFinalProject
             lbNewCPFCNPJ.Text = "CNPJ";
             lbNewName.Text = "Razão Social";
             mtbCPFCNPJ.Mask = "00.000.000/0000-00";
-
+            mtbCPFCNPJNewCostumer.Mask = "00.000.000/0000-00";
         }
 
         private void rbCPF_CheckedChanged(object sender, EventArgs e)
@@ -221,6 +221,7 @@ namespace wfaFinalProject
             lbNewCPFCNPJ.Text = "CPF";
             lbNewName.Text = "Nome";
             mtbCPFCNPJ.Mask = "000.000.000-00";
+            mtbCPFCNPJNewCostumer.Mask = "000.000.000-00";
         }
     }
 }

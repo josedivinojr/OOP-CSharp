@@ -145,7 +145,7 @@
             // 
             this.tbNomeRasaoSocialNewCostumer.Location = new System.Drawing.Point(97, 61);
             this.tbNomeRasaoSocialNewCostumer.Name = "tbNomeRasaoSocialNewCostumer";
-            this.tbNomeRasaoSocialNewCostumer.Size = new System.Drawing.Size(246, 20);
+            this.tbNomeRasaoSocialNewCostumer.Size = new System.Drawing.Size(197, 20);
             this.tbNomeRasaoSocialNewCostumer.TabIndex = 37;
             // 
             // mtbPhoneNewCostumer
@@ -186,7 +186,7 @@
             // 
             this.tbEmailNewCostumer.Location = new System.Drawing.Point(97, 92);
             this.tbEmailNewCostumer.Name = "tbEmailNewCostumer";
-            this.tbEmailNewCostumer.Size = new System.Drawing.Size(246, 20);
+            this.tbEmailNewCostumer.Size = new System.Drawing.Size(197, 20);
             this.tbEmailNewCostumer.TabIndex = 39;
             // 
             // dataGridViewCostumers
@@ -366,7 +366,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewCostumers);
             this.Name = "FormCostumer";
-            this.Text = "FormCostumer";
+            this.Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCostumers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

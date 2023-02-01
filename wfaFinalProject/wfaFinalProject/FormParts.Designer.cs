@@ -77,7 +77,7 @@
             this.groupBoxAppointment.Size = new System.Drawing.Size(272, 122);
             this.groupBoxAppointment.TabIndex = 48;
             this.groupBoxAppointment.TabStop = false;
-            this.groupBoxAppointment.Text = "Pesquisar Relação de Visitas";
+            this.groupBoxAppointment.Text = "Pesquisar Relação de Peças";
             // 
             // cbParts
             // 
@@ -107,7 +107,7 @@
             this.btnSelectAllParts.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSelectAllParts.Size = new System.Drawing.Size(161, 25);
             this.btnSelectAllParts.TabIndex = 36;
-            this.btnSelectAllParts.Text = "Listar todas as visitas";
+            this.btnSelectAllParts.Text = "Listar todas as peças";
             this.btnSelectAllParts.UseVisualStyleBackColor = true;
             this.btnSelectAllParts.Click += new System.EventHandler(this.btnSelectAllParts_Click);
             // 
@@ -127,7 +127,7 @@
             this.Controls.Add(this.groupBoxAppointment);
             this.Controls.Add(this.dataGridViewParts);
             this.Name = "FormParts";
-            this.Text = "FormParts";
+            this.Text = "Peças";
             this.groupBoxAppointment.ResumeLayout(false);
             this.groupBoxAppointment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParts)).EndInit();

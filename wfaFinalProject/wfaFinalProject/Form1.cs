@@ -13,7 +13,7 @@ using Color = System.Drawing.Color;
 
 namespace wfaFinalProject
 {
-    public partial class Form1 : Form
+    public partial class FormHomePage : Form
     {
         //Fields
         private IconButton selectedButton;
@@ -21,7 +21,7 @@ namespace wfaFinalProject
         private Form currentChildForm;
 
 
-        public Form1()
+        public FormHomePage()
         {
             InitializeComponent();
             leftBorderButton = new Panel();

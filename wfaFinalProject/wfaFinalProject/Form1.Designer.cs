@@ -1,6 +1,6 @@
 ﻿namespace wfaFinalProject
 {
-    partial class Form1
+    partial class FormHomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -225,7 +225,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // FormHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -233,8 +233,8 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelBackShadow);
             this.Controls.Add(this.leftPanel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormHomePage";
+            this.Text = "Homepage";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.leftPanel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
